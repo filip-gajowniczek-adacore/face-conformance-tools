@@ -1,6 +1,6 @@
 project Safety_Extended_Client is
 
-   for Main use ("demo");
+   for Main use ("demo", "extended_demo");
 
    for Source_Dirs use ("src");
 
@@ -10,7 +10,10 @@ project Safety_Extended_Client is
 
    package Compiler is
       for Switches("Ada") use
-        ("-gnatwe",   --  treat all warnings and style violations as errors
+        ("-gnatf",    --  Full errors. Verbose details, all undefined references
+         "-gnatq",    --  Don't quit, try semantics, even if parse errors
+         "-gnatl",    --  Output full source listing with embedded error messages
+         "-gnatwe",   --  treat all warnings and style violations as errors
          "-gnatyN",   --  but turn off all style checks
          "-gnatI",    --  ignore rep clauses, eg for sake of endianness issues etc.
          "-gnatwi"    --  warn on context-clauses for internal units
