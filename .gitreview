@@ -1,0 +1,5 @@
+[gerrit]
+host = git.adacore.com
+project = face-conformance-tools
+defaultbranch = master
+defaultremote = origin
