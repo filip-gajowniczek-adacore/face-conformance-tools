@@ -142,6 +142,9 @@
 
 +R : ADA_GENERAL_INFO_SYSTEMS :
    Forbidden_Attributes : Machine_Radix
+--  The Annex describes the setting of Machine_Radix in an attribute definition clause,
+--  i.e., a specific usage, not a general prohibition. (The attribute is defined elsewhere,
+--  in Annex A.)
 
 +R : ADA_GENERAL_INFO_SYSTEMS :
    Restrictions : No_Dependence => Ada.Decimal,
