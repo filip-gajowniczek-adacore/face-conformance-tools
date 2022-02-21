@@ -46,7 +46,7 @@
 
 +R : ADA_GENERAL_ASYNC_CTL :
    Restrictions : Max_Asynchronous_Select_Nesting => 0
-                  
+
 
 -------------------------------------------------------------------------------
 
