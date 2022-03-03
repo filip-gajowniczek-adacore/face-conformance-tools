@@ -2,11 +2,11 @@
 --                                                                          --
 --                         GNAT RUN-TIME COMPONENTS                         --
 --                                                                          --
---                       S Y S T E M . E X N _ I N T                        --
+--                       S Y S T E M . E X N _ F L T                        --
 --                                                                          --
 --                                 S p e c                                  --
 --                                                                          --
---          Copyright (C) 1992-2022, Free Software Foundation, Inc.         --
+--            Copyright (C) 2021-2022, Free Software Foundation, Inc.       --
 --                                                                          --
 -- GNAT is free software;  you can  redistribute it  and/or modify it under --
 -- terms of the  GNU General Public License as published  by the Free Soft- --
@@ -29,28 +29,13 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
---  Integer exponentiation (checks off)
+--  Float exponentiation (checks off)
 
---  Preconditions, postconditions, ghost code, loop invariants and assertions
---  in this unit are meant for analysis only, not for run-time checking, as it
---  would be too costly otherwise. This is enforced by setting the assertion
---  policy to Ignore.
+with System.Exponr;
 
-pragma Assertion_Policy (Pre            => Ignore,
-                         Post           => Ignore,
-                         Ghost          => Ignore,
-                         Loop_Invariant => Ignore,
-                         Assert         => Ignore);
+package System.Exn_Flt is
 
-with System.Exponn;
+   function Exn_Float is new Exponr (Float);
+   pragma Pure_Function (Exn_Float);
 
-package System.Exn_Int
-  with SPARK_Mode
-is
-
-   package Exponn_Integer is new Exponn (Integer);
-
-   function Exn_Integer (Left : Integer; Right : Natural) return Integer
-     renames Exponn_Integer.Expon;
-
-end System.Exn_Int;
+end System.Exn_Flt;

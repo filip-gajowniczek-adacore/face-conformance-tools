@@ -2,7 +2,7 @@
 --                                                                          --
 --                         GNAT RUN-TIME COMPONENTS                         --
 --                                                                          --
---                       S Y S T E M . E X N _ I N T                        --
+--                        S Y S T E M . E X P O N N                         --
 --                                                                          --
 --                                 S p e c                                  --
 --                                                                          --
@@ -29,28 +29,16 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
---  Integer exponentiation (checks off)
+--  Signed integer exponentiation (checks off)
 
---  Preconditions, postconditions, ghost code, loop invariants and assertions
---  in this unit are meant for analysis only, not for run-time checking, as it
---  would be too costly otherwise. This is enforced by setting the assertion
---  policy to Ignore.
+generic
 
-pragma Assertion_Policy (Pre            => Ignore,
-                         Post           => Ignore,
-                         Ghost          => Ignore,
-                         Loop_Invariant => Ignore,
-                         Assert         => Ignore);
+   type Int is range <>;
 
-with System.Exponn;
-
-package System.Exn_Int
-  with SPARK_Mode
+package System.Exponn
+  with Pure
 is
 
-   package Exponn_Integer is new Exponn (Integer);
+   function Expon (Left : Int; Right : Natural) return Int;
 
-   function Exn_Integer (Left : Integer; Right : Natural) return Integer
-     renames Exponn_Integer.Expon;
-
-end System.Exn_Int;
+end System.Exponn;
