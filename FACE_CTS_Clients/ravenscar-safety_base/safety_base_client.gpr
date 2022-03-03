@@ -6,10 +6,10 @@ project Safety_Base_Client is
 
    for Object_Dir use "objs";
 
-   for Runtime ("Ada") use "C:\work\FACE_Gold_RTLs\rts-ravenscar-safety_base";
+   for Runtime ("Ada") use "../../FACE_Gold_RTLs/rts-ravenscar-safety_base";
 
    package Compiler is
-      for Switches("Ada") use
+      for Switches ("Ada") use
         ("-gnatf",    --  Full errors. Verbose details, all undefined references
          "-gnatq",    --  Don't quit, try semantics, even if parse errors
          "-gnatl",    --  Output full source listing with embedded error messages

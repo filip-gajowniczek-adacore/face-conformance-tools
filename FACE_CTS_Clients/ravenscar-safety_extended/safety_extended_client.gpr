@@ -6,7 +6,7 @@ project Safety_Extended_Client is
 
    for Object_Dir use "objs";
 
-   for Runtime ("Ada") use "C:\work\FACE_Gold_RTLs\rts-ravenscar-safety_extended";
+   for Runtime ("Ada") use "../../FACE_Gold_RTLs/rts-ravenscar-safety_extended";
 
    package Compiler is
       for Switches("Ada") use
