@@ -6,7 +6,7 @@ project FACE_Analysis is
 
    for Object_Dir use "gnatcheck_results/rts-" & Capability_Set;
 
-   RTL_Prefix := "rts-ravenscar-";
+   RTL_Prefix := "rts-face-gsl-";
 
    for Source_Dirs use (RTL_Prefix & Capability_Set & "/gnat");
 
