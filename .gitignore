@@ -1,8 +1,12 @@
 # Object file
 *.o
+*.a
 
 # Ada Library Information
 *.ali
 
 # mac files
 .DS_Store
+
+# Results text files of analysis
+*results.txt

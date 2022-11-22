@@ -1,0 +1,20 @@
+with "libgnat.gpr";
+
+project libgnarl_empty is
+  for Languages use ("C");
+
+  for Runtime ("Ada") use libgnat'Runtime("Ada");
+  for Target use libgnat'Target;
+
+  for Library_Auto_Init use "False";
+  for Library_Name use "gnarl";
+  for Library_Kind use "static";
+
+  for Library_Dir use "adalib";
+  for Object_Dir use "obj";
+
+  for Source_Dirs use ("gnarl_empty");
+
+  package Compiler renames libgnat.Compiler;
+
+end libgnarl_empty;
